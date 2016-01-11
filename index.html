@@ -4,7 +4,7 @@
     <title>This is a title</title>
   </head>
   <body>
-    <script>
+    <script type="text/javascript">
       function newStream() {
     var streams = ['http://player.twitch.tv/?channel=imaqtpie',
                  'http://player.twitch.tv/?channel=lirik',
@@ -13,8 +13,8 @@
     document.getElementById('myIframe').src = streams[Math.floor(Math.random() * sites.length)];
 }
     </script>
-    <iframe id="" frameborder="0" scrolling="no" height="378" width="620"></iframe>
+    <iframe id="myIframe" src="" frameborder="0" scrolling="no" height="378" width="620" onload="newStream()"></iframe>
     <br/>
-    <button onclick"newStream()">Get New Stream!</button>
+    <button onClick"newStream()">Get New Stream!</button>
   </body>
 </html>
